@@ -33,7 +33,7 @@ download(){
     wget https://github.com/aperezdc/ngx-fancyindex/releases/download/v${IMAU_NGINX_fancyindex}/ngx-fancyindex-${IMAU_NGINX_fancyindex}.tar.xz
     wget https://nginx.org/download/nginx-${IMAU_NGINX_VERSION}.tar.gz
     wget https://github.com/nginx/njs/archive/refs/tags/0.6.2.tar.gz
-    tar -xf 0.6.2.tar.gz && tar -xf nginx-${IMAU_NGINX_VERSION}.tar.gz && ngx-fancyindex-${IMAU_NGINX_fancyindex}.tar.xz
+    tar -xf 0.6.2.tar.gz && tar -xf nginx-${IMAU_NGINX_VERSION}.tar.gz && tar -xf  ngx-fancyindex-${IMAU_NGINX_fancyindex}.tar.xz
     wget -O /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v${IMAU_DUMP_INIT}/dumb-init_${IMAU_DUMP_INIT}_x86_64 
     chmod +x /usr/local/bin/dumb-init
 }
@@ -55,6 +55,7 @@ build(){
                  --add-dynamic-module=/tmp/ngx-fancyindex-${IMAU_NGINX_fancyindex} \
                  --add-dynamic-module=/tmp/njs-${IMAU_NJS}/nginx
 
+    make && make install
     
 }
 
