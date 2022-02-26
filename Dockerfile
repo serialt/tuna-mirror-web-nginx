@@ -13,7 +13,7 @@ RUN  sed -e 's|^mirrorlist=|#mirrorlist=|g' \
     -i.bak \
     -i /etc/yum.repos.d/epel*.repo
 
-RUN  yum -y update && yum install pcre-devel openssl-devel gcc gcc-c++ -y
+RUN  yum -y update && yum install pcre-devel openssl-devel gcc gcc-c++ wget -y
 
 
 ADD build.sh /opt/
@@ -37,7 +37,7 @@ RUN  sed -e 's|^mirrorlist=|#mirrorlist=|g' \
     -i.bak \
     -i /etc/yum.repos.d/epel*.repo
 
-RUN yum -y update 
+RUN yum -y update
 
 COPY --from=build-env /opt /opt
 COPY --from=build-env /usr/local/bin/dumb-init /usr/local/bin/dumb-init
