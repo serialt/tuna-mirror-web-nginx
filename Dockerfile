@@ -22,7 +22,6 @@ RUN bash /opt/build.sh
 ADD nginx.conf  /opt/nginx/conf/
 
 
-
 FROM rockylinux:8.5
 
 LABEL mantainer="serialt <tserialt@gmail.com> build tuna web image"
