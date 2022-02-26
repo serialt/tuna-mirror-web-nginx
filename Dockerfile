@@ -13,7 +13,7 @@ RUN  sed -e 's|^mirrorlist=|#mirrorlist=|g' \
     -i.bak \
     -i /etc/yum.repos.d/epel*.repo
 
-RUN  yum -y update && yum install make xz  pcre-devel openssl-devel gcc gcc-c++ wget -y
+RUN  yum -y update && yum install glibc  autoconf  make xz openssl  openssl-devel gcc gcc-c++ wget -y && yum -y install  libxslt-devel -y gd gd-devel GeoIP GeoIP-devel pcre pcre-devel
 
 
 ADD build.sh /opt/
