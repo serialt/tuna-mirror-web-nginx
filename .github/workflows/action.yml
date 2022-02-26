@@ -47,5 +47,5 @@ jobs:
           --output "type=image,push=true" \
           --file ./Dockerfile . \
           --tag serialt/vscode:"${fullCommit: 0: 7}" && \ 
-          docker tag serialt/tuna-mirror-web-nginx:"${fullCommit: 0: 7} serialt/vscode:latest &&\
+          docker tag serialt/tuna-mirror-web-nginx:"${fullCommit: 0: 7} serialt/vscode:latest && \
           docker push serialt/tuna-mirror-web-nginx:latest
