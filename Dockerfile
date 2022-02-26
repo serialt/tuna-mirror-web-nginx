@@ -13,7 +13,7 @@ RUN  sed -e 's|^mirrorlist=|#mirrorlist=|g' \
     -i.bak \
     -i /etc/yum.repos.d/epel*.repo
 
-RUN  yum -y update && yum install pcre-devel openssl-devel gcc gcc-c++ wget -y
+RUN  yum -y update && yum install make  pcre-devel openssl-devel gcc gcc-c++ wget -y
 
 
 ADD build.sh /opt/
