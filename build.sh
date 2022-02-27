@@ -6,7 +6,7 @@
 # Email         : serialt@qq.com
 # Github        : https://github.com/serialt
 # Created Time  : 2022-02-24 23:26:51
-# Last modified : 2022-02-27 12:37:20
+# Last modified : 2022-02-27 12:45:27
 # FilePath      : /tuna-mirror-web/build.sh
 # Other         : 
 #               : 
@@ -37,8 +37,8 @@ download(){
     wget https://nginx.org/download/nginx-${IMAU_NGINX_VERSION}.tar.gz
     wget https://github.com/nginx/njs/archive/refs/tags/0.6.2.tar.gz
     tar -xf 0.6.2.tar.gz && tar -xf nginx-${IMAU_NGINX_VERSION}.tar.gz && tar -xf ngx-fancyindex-${IMAU_NGINX_fancyindex}.tar.xz
-    wget -O /usr/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v${IMAU_DUMP_INIT}/dumb-init_${IMAU_DUMP_INIT}_x86_64 
-    chmod +x /usr/bin/dumb-init
+    wget -O /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v${IMAU_DUMP_INIT}/dumb-init_${IMAU_DUMP_INIT}_x86_64 
+    chmod +x /usr/local/bin/dumb-init
 }
 
 build(){
