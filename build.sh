@@ -6,7 +6,7 @@
 # Email         : serialt@qq.com
 # Github        : https://github.com/serialt
 # Created Time  : 2022-02-24 23:26:51
-# Last modified : 2022-02-27 00:46:28
+# Last modified : 2022-02-27 11:45:08
 # FilePath      : /tuna-mirror-web/build.sh
 # Other         : 
 #               : 
@@ -27,6 +27,9 @@ export IMAU_DUMP_INIT=1.2.5
 
 
 
+installENV(){
+    apt -y install build-essential libpcre3 libpcre3-dev zlib1g-dev unzip openssl libssl-dev gcc gcc-c++
+}
 
 download(){
     cd /tmp/
