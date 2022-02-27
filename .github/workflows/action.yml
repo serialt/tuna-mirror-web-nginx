@@ -53,5 +53,5 @@ jobs:
           --tag serialt/tuna-mirror-web-nginx:"${fullCommit: 0: 7}"
       - name: push latest
         run: |
-          docker tag serialt/tuna-mirror-web-nginx:"${fullCommit: 0: 7} serialt/tuna-mirror-web-nginx:latest 
+          docker tag serialt/tuna-mirror-web-nginx:"${fullCommit: 0: 7}" serialt/tuna-mirror-web-nginx:latest 
           docker push serialt/tuna-mirror-web-nginx:latest
