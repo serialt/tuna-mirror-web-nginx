@@ -27,7 +27,7 @@ RUN  apt-get update &&  apt-get upgrade -y && apt-get install -y apt-transport-h
 #     -i /etc/apt/sources.list
 
 
-ADD /opt/nginx /opt/nginx
+ADD nginx /opt/nginx
 
 ADD nginx.conf  /opt/nginx/conf/
 ADD run.sh /opt/

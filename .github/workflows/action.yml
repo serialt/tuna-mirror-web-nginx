@@ -28,6 +28,7 @@ jobs:
       - name: build nginx
         run: |
           bash build.sh
+          cp -r /opt/nginx ./
       - name: Login docker hub
         env:
           DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
